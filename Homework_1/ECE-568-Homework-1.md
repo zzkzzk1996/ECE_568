@@ -283,7 +283,7 @@ WHERE m.movieid NOT IN
 ### Question 4
 #### (a)
 > In this question, we can easily find that TRIGGER is actually doing some recursively work. According to this feature, we can use these codes to describe what happens in these cases.
->>When 4 -> 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 4 -> 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 4 -> 0.75, 3<sup>rd</sup> trigger doesn't work, so the recursion work starts. The outputs of the codes are 4 -> 0.75, then 4 -> 1.5 and finally 4 -> 3.
+>>When 4 &longrightarrow; 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 4 &longrightarrow; 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 4 &longrightarrow; 0.75, 3<sup>rd</sup> trigger doesn't work, so the recursion work starts. The outputs of the codes are 4 &longrightarrow; 0.75, then 4 &longrightarrow; 1.5 and finally 4 &longrightarrow; 3.
 ```sql
 
 UPDATE purchase
@@ -297,7 +297,7 @@ WHERE purchaseID = 111
 --TODO
 ```
 #### (b)
->When 4 -> 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 3 -> 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 1.5 -> 0.75, 3<sup>rd</sup> trigger doesn't work. The outputs of the codes are 4 -> 3, then 3 -> 1.5 and finally 1.5 -> 0.75.
+>When 4 &longrightarrow; 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 3 &longrightarrow; 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 1.5 &longrightarrow; 0.75, 3<sup>rd</sup> trigger doesn't work. The outputs of the codes are 4 &longrightarrow; 3, then 3 &longrightarrow; 1.5 and finally 1.5 &longrightarrow; 0.75.
 ```sql
 
 UPDATE purchase
@@ -312,7 +312,7 @@ WHERE purchaseID = 111
 
 ```
 #### (c)
->When 4 -> 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 4 -> 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 4 -> 0.75, 3<sup>rd</sup> trigger doesn't work. However, the outputs of the codes aren't changed.
+>When 4 &longrightarrow; 3, 1<sup>st</sup> trigger works and set new price to 1.5(3/2). Then 4 &longrightarrow; 1.5, 2<sup>nd</sup> trigger works and set new price to 0.75(1.5/2). Next 4 &longrightarrow; 0.75, 3<sup>rd</sup> trigger doesn't work. However, the outputs of the codes aren't changed.
 ```sql
 
 UPDATE purchase
