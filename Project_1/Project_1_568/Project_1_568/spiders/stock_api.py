@@ -8,7 +8,7 @@ from Project_1_568.items import Project1568Item
 class StockApiSpider(scrapy.Spider):
     name = 'stock_api'
     allowed_domains = ['alphavantage.co']
-    stocks = ['GOOG', 'MSFT', 'YHOO', 'AAPL', 'GS', 'JAVA', 'JPM', 'DELL', 'IBM', 'NVDA']
+    stocks = ['GOOG', 'MSFT', 'AAPL', 'GS', 'JPM', 'DELL', 'IBM', 'NVDA']
     start_urls = [
         'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={}&outputsize=full&apikey'
         '=VBOSTIUBM79EGTL7'.format(stock) for stock in stocks]

@@ -2,24 +2,8 @@
 
 from scrapy import cmdline
 import time
-from subprocess import Popen
 import logging
 from multiprocessing import Process
-
-
-cmdline.execute('scrapy crawl stock_api'.split())
-# cmdline.execute('scrapy crawl stock_real_time'.split())
-# def loop():
-#     while True:
-#         sleep(60)
-# execute('scrapy crawl stock_real_time'.split())
-#         Popen('scrapy crawl Project_1_568/spiders/stock_real_time.py')
-#
-#
-# if __name__ == '__main__':
-#     Popen('scrapy crawl stock_real_time')
-#     # execute('scrapy crawl stock_real_time'.split())
-#     loop()
 
 confs = [
     {
@@ -41,6 +25,9 @@ def start_spider(spider_name, frequency):
 
 
 if __name__ == '__main__':
+    # for history start
+    # cmdline.execute('scrapy crawl stock_api'.split())
+    # for real-time start
     for conf in confs:
         process = Process(target=start_spider,
                           args=(conf["spider_name"], conf["frequency"]))
